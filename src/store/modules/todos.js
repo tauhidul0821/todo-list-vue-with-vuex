@@ -27,16 +27,22 @@ const getters = {
 }
 const actions = {
     testAction: () => {
-        console.log('this is action test from vuex');
+        console.log('this is vuex');
     },
-    deleteTodo: ({commit},id)=>{
-        console.log('this is deleteTodo form vueX',id);
+    deleteTodo: ({ commit }, id) => {
+        console.log('this is vuex', id);
+        commit('testMutation')
+    },
+    addTodos: ({ commit }, title) => {
+        console.log('this is vuex', title);
+
         commit('testMutation')
     }
 }
+
 const mutations = {
     testMutation: () => {
-        console.log('this is test Mutation');
+        console.log('this is vuex');
     }
 }
 
