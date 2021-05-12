@@ -4,12 +4,12 @@ const state = {
     todos: []
 }
 
-
 const getters = {
     allTodos: (state) => {
         return state.todos
     }
 }
+
 const actions = {
     testAction() {
         console.log('this is vuex');
@@ -40,8 +40,6 @@ const actions = {
         )
         commit('setTodos', response.data)
     }
-
-
 }
 
 const mutations = {

@@ -29,7 +29,7 @@ export default {
   name: "Todo",
   methods: {
     ...mapMutations(["testMutation"]),
-    ...mapActions(["testAction",'fetchTodos', "updatedTodo", "deleteTodo"]),
+    ...mapActions(["testAction", "fetchTodos", "updatedTodo", "deleteTodo"]),
     onSumonClick(todo) {
       const updTodo = {
         id: todo.id,
