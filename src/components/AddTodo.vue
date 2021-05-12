@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h3>Add Todo</h3>
-
+    <h3 class="headerDesign">Todo List</h3>
     <div class="add">
       <form @submit="onSubmit">
         <input type="text" v-model="title" placeholder="Add Todo..." />
@@ -51,5 +50,9 @@ input[type="submit"] {
   color: #fff;
   border: 1px #41b883 solid;
   cursor: pointer;
+}
+
+.headerDesign{
+  margin-top: -50px;
 }
 </style>
