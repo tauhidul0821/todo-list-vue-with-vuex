@@ -7,7 +7,12 @@
       <span> <span class="complete-box"></span> = complete </span>
     </div>
     <div class="todos">
-      <div class="todo" v-for="todo in allTodos" :key="todo.id">
+      <div
+        class="todo"
+        v-for="todo in allTodos"
+        :key="todo.id"
+        @dblclick="onSumonClick(todo)"
+      >
         {{ todo.title }}
 
         <i @click="deleteTodo(todo.id)" class="fas fa-trash-alt"></i>
@@ -24,7 +29,16 @@ export default {
   name: "Todo",
   methods: {
     ...mapMutations(["testMutation"]),
-    ...mapActions(["testAction", "deleteTodo"]),
+    ...mapActions(["testAction",'fetchTodos', "updatedTodo", "deleteTodo"]),
+    onSumonClick(todo) {
+      const updTodo = {
+        id: todo.id,
+        title: todo.title,
+        completed: !todo.completed,
+      };
+
+      this.updatedTodo(updTodo);
+    },
     check() {
       console.log("this is action check from component");
     },
@@ -32,6 +46,7 @@ export default {
   computed: mapGetters(["allTodos"]),
   created() {
     this.testAction();
+    this.fetchTodos();
     console.log("when load finish then call ");
   },
 };
