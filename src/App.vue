@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <AddTodo />
-    <Todo />
+    <div id="nav">
+      <router-link :to="{ name: 'Todo' }">Home</router-link> |
+      <router-link :to="{ name: 'About' }">About</router-link>
+    </div>
+
+    <router-view />
   </div>
 </template>
 
 <script>
-import Todo from "./components/Todo.vue";
-import AddTodo from "./components/AddTodo";
+// import Todo from "./components/Todo.vue";
+// import AddTodo from "./components/AddTodo";
 
 export default {
   name: "App",
   components: {
-    Todo,
-    AddTodo,
+    // Todo,
+    // AddTodo,
   },
 };
 </script>
