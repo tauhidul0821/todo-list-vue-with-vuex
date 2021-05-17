@@ -50,8 +50,6 @@ export default {
     console.log("when load finish then call ");
   },
 };
-
-// console.log(allTodos);
 </script>
 
 <style scoped>

@@ -3,38 +3,44 @@ const state = {
     todos: []
 }
 const getters = {
-    allTodos: (state) => {
-        return state.todos
-    }
+    allTodos: (state) => (state.todos)
 }
 const actions = {
+
     testAction() {
         console.log('this is vuex');
     },
-    async deleteTodo({ commit }, id) {
-        await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
 
+    deleteTodo: async ({ commit }, id) => {
+        await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
+        console.log('vuex: actions deleteTodo');
         commit('removeTodo', id)
     },
-    async addTodos({ commit }, title) {
+
+    addTodos: async ({ commit }, title) => {
         const response = await axios.post(
             'https://jsonplaceholder.typicode.com/todos',
             { title, completed: false }
         );
+        console.log('vuex: actions addTodos');
 
         commit('newTodo', response.data)
     },
-    async updatedTodo({ commit }, updTodo) {
+    updatedTodo: async ({ commit }, updTodo) => {
         console.log('this is updatedTodo vuex', updTodo);
         const response = await axios.put(`https://jsonplaceholder.typicode.com/todos/${updTodo.id}`,
             updTodo)
 
+        console.log('vuex: actions updatedTodo');
+
         commit('updateTodo', response.data);
     },
-    async fetchTodos({ commit }) {
+    fetchTodos: async ({ commit }) => {
         const response = await axios.get(
             'https://jsonplaceholder.typicode.com/todos'
         )
+        console.log('vuex: actions fetchTodos');
+
         commit('setTodos', response.data)
     }
 }
