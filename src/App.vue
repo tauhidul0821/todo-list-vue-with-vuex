@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
+      <h3>Todo List</h3>
       <router-link :to="{ name: 'Todo' }">Home</router-link> |
       <router-link :to="{ name: 'About' }">About</router-link>
     </div>
