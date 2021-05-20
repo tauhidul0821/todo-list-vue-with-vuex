@@ -7,18 +7,25 @@ const tags = ref([])
 ```
 ## 1. ans: composition api ke reactive korar jonno ref use kora hoy 
 
-#composition api 
+# composition api 
 ```js
 setup(){ // alwase run first  & this is composition api 
 // everything define inside setup method mens 
 
 // but it is not provide reactive value 
+    return{
+        
+    }
 
 }
 
 // composition api ke reactive korar jonno ref use kora hoy 
 
 data(){// it is alwase provide reactive value 
+return {
+    name: 'tauhidul',
+    age: 23
+}
 }
 ```
 
