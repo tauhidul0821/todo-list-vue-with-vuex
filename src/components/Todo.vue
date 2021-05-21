@@ -11,7 +11,8 @@
         class="todo"
         v-for="todo in allTodos"
         :key="todo.id"
-        @dblclick="onSumonClick(todo)"
+        @dblclick="onDblClick(todo)"
+        :class="{'is-complete': todo.completed}"
       >
         {{ todo.title }}
 
@@ -30,7 +31,7 @@ export default {
   methods: {
     ...mapMutations(["testMutation"]),
     ...mapActions(["testAction", "fetchTodos", "updatedTodo", "deleteTodo"]),
-    onSumonClick(todo) {
+    onDblClick(todo) {
       const updTodo = {
         id: todo.id,
         title: todo.title,

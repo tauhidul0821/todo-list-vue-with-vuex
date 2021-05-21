@@ -12,14 +12,28 @@ const actions = {
     },
 
     deleteTodo: async ({ commit }, id) => {
-        await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
+        await axios.delete(`http://localhost:3000/todos/${id}`);
         console.log('vuex: actions deleteTodo');
         commit('removeTodo', id)
     },
 
+    filterTodos: async ({ commit }, e) => {
+        const limit = parseInt(
+            e.target.options[e.target.options.selectedIndex].innerText
+        )
+
+        const response = await axios.get(`http://localhost:3000/todos?_limit=${limit}`)
+
+        console.log(response)
+
+        commit('setTodos', response.data)
+
+
+    },
+
     addTodos: async ({ commit }, title) => {
         const response = await axios.post(
-            'https://jsonplaceholder.typicode.com/todos',
+            'http://localhost:3000/todos',
             { title, completed: false }
         );
         console.log('vuex: actions addTodos');
@@ -28,7 +42,7 @@ const actions = {
     },
     updatedTodo: async ({ commit }, updTodo) => {
         console.log('this is updatedTodo vuex', updTodo);
-        const response = await axios.put(`https://jsonplaceholder.typicode.com/todos/${updTodo.id}`,
+        const response = await axios.put(`http://localhost:3000/todos/${updTodo.id}`,
             updTodo)
 
         console.log('vuex: actions updatedTodo');
@@ -37,7 +51,7 @@ const actions = {
     },
     fetchTodos: async ({ commit }) => {
         const response = await axios.get(
-            'https://jsonplaceholder.typicode.com/todos'
+            'http://localhost:3000/todos'
         )
         console.log('vuex: actions fetchTodos');
 
