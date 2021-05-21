@@ -55,7 +55,7 @@
     {
       "id": 20,
       "title": "ullam nobis libero sapiente ad optio sint",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 2,
@@ -169,10 +169,9 @@
       "completed": false
     },
     {
-      "userId": 3,
       "id": 41,
       "title": "aliquid amet impedit consequatur aspernatur placeat eaque fugiat suscipit",
-      "completed": false
+      "completed": true
     }
   ]
 }

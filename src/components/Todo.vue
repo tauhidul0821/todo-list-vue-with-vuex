@@ -1,6 +1,8 @@
 <template>
   <div>
     <h4></h4>
+    <AddTodo />
+
     <div class="legend">
       <span>Double click to mark as complete</span>
       <span> <span class="incomplete-box"></span> = Incomplete </span>
@@ -26,8 +28,13 @@
 
 <script>
 import { mapMutations, mapActions, mapGetters } from "vuex";
+import AddTodo from "./AddTodo";
 export default {
   name: "Todo",
+  components:{
+    AddTodo
+
+  },
   methods: {
     ...mapMutations(["testMutation"]),
     ...mapActions(["testAction", "fetchTodos", "updatedTodo", "deleteTodo"]),
