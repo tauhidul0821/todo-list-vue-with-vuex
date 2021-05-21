@@ -2,6 +2,7 @@
   <div>
     <h4></h4>
     <AddTodo />
+    <FilterTodos />
 
     <div class="legend">
       <span>Double click to mark as complete</span>
@@ -29,10 +30,12 @@
 <script>
 import { mapMutations, mapActions, mapGetters } from "vuex";
 import AddTodo from "./AddTodo";
+import FilterTodos from "./FilterTodos";
 export default {
   name: "Todo",
   components:{
-    AddTodo
+    AddTodo,
+    FilterTodos
 
   },
   methods: {
