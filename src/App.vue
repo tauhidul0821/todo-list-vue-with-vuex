@@ -3,7 +3,9 @@
     <div id="nav">
       <h3>Todo List</h3>
       <router-link :to="{ name: 'Todo' }">Home</router-link> |
-      <router-link :to="{ name: 'About' }">About</router-link>
+      <router-link :to="{ name: 'About' }">About</router-link> |
+      <router-link :to="{ name: 'DynamicField' }">DynamicField</router-link>
+      <h3>ad</h3>
     </div>
 
     <router-view />
@@ -11,15 +13,9 @@
 </template>
 
 <script>
-// import Todo from "./components/Todo.vue";
-// import AddTodo from "./components/AddTodo";
-
 export default {
   name: "App",
-  components: {
-    // Todo,
-    // AddTodo,
-  },
+  components: {},
 };
 </script>
 

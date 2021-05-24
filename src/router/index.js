@@ -15,6 +15,11 @@ const routes = [
         path: '/about',
         name: 'About',
         component: () => import('@/components/About.vue')
+    },
+    {
+        path: '/dynamic',
+        name: 'DynamicField',
+        component: () => import('@/components/DynamicField.vue')
     }
 ]
 
