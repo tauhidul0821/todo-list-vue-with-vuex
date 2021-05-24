@@ -78,8 +78,6 @@ export default {
 
 
 <style scoped>
-@import '../assets/tailwind.css';
-
 div p {
   color: green;
 }
