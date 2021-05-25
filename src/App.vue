@@ -5,7 +5,7 @@
       <router-link :to="{ name: 'Todo' }">Home</router-link> |
       <router-link :to="{ name: 'About' }">About</router-link> |
       <router-link :to="{ name: 'DynamicField' }">DynamicField</router-link>
-      <h3>ad</h3>
+      <h3 class="bottom"></h3>
     </div>
 
     <router-view />
@@ -27,5 +27,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.bottom{
+  margin-bottom: 61px;
 }
 </style>

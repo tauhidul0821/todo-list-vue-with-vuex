@@ -1,8 +1,7 @@
 
 # Todo List Vue with Vuex
 ### project view 
-<img width="695" alt="Screenshot 2021-05-22 at 8 36 46 AM" src="https://user-images.githubusercontent.com/10520882/119212250-e7d30280-bad8-11eb-8054-cc9cd26c0d74.png">
-
+<img width="742" alt="Screenshot 2021-05-25 at 12 15 56 PM" src="https://user-images.githubusercontent.com/10520882/119448424-24119780-bd53-11eb-95fd-270e52d40a98.png">
 
 
 ## vueX everything in 3 photo 
