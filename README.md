@@ -33,7 +33,7 @@
     this.$store.dispatch('fetchTodos');
 ```
 #### here is full file for call vuex without map function
-```js
+```vue
 <template>
   <div>
     <h4></h4>
